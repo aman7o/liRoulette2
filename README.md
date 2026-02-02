@@ -2,6 +2,20 @@
 
 Multiplayer roulette game on Linera microchains with real-time cross-chain gameplay.
 
+## Screenshots
+
+### Game Modes
+![Game Modes](screenshots/screenshot-modes.png)
+
+### Gameplay
+![Gameplay](screenshots/screenshot.-game.png)
+
+### Multiplayer
+![Multiplayer](screenshots/screenshot-multiplayer.png)
+
+### Host Room
+![Host Room](screenshots/screenshot-host.png)
+
 ## Features
 
 - **Real-time Multiplayer**: Cross-chain gameplay with host/join mode
@@ -40,6 +54,13 @@ Multiplayer roulette game on Linera microchains with real-time cross-chain gamep
 3. **Join**: Connect to an existing game room
 
 ## Architecture
+
+```
+Player Chain 1  ←→  Host Chain  ←→  Player Chain 2
+     ↓                  ↓                  ↓
+  Own bets        Game state         Own bets
+  Own balance     All players        Own balance
+```
 
 - Microchain-based state isolation
 - Host chain manages game state
