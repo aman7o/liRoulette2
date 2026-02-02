@@ -236,28 +236,6 @@ Test all 13 bet types:
 - Graceful cleanup on exit
 - Clear error messages and logging
 
-## Known Limitations
-
-- RNG is deterministic (block-based) - suitable for demo, not casino-grade
-- Conway Testnet may have intermittent availability
-- Multiplayer requires manual coordination (no matchmaking)
-
-## Future Enhancements
-
-- WebSocket support for real-time updates
-- Persistent leaderboards
-- Tournament mode with prize pools
-- Enhanced RNG with VRF (Verifiable Random Function)
-- Mobile-responsive design
-
-## License
-
-MIT License
-
-## Contact
-
-For questions or issues, please open a GitHub issue.
-
 ---
 
 **Built for Linera Blockchain** | **Conway Testnet Ready** | **Production Grade**
