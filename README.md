@@ -48,7 +48,7 @@ The game is already running on Conway Testnet - no setup required! Use the App I
 
 🎰 **Ready to Play**: Already deployed and running on Conway Testnet
 
-- **App ID**: `a204d053e0a7cf735df997e23e4d2d5e9c61cf3f539fcfdab1e6a737a0279da8c1e97e53240f5b8a86b1f2de7aa99b05f82bc2dbc8eb64ec2b419f98d3f17f5a`
+- **App ID**: `a204d0538ae511fe0fa89ff4483ea2282d221999044274f87aa8be9ea84e340a`
 - **Network**: Conway Testnet
 - **Chains**: 20 pre-deployed game rooms ready for multiplayer
 
