@@ -58,6 +58,14 @@ echo ""
 # Step 3: Start Linera service
 echo -e "${YELLOW}🌐 Step 3/4: Starting Linera service...${NC}"
 
+# Check if port 8080 is already in use
+if lsof -Pi :8080 -sTCP:LISTEN -t >/dev/null 2>&1; then
+    echo -e "${YELLOW}   Port 8080 is in use. Cleaning up...${NC}"
+    lsof -ti:8080 | xargs kill -9 2>/dev/null
+    sleep 2
+    echo -e "${GREEN}   ✓ Port 8080 cleared${NC}"
+fi
+
 # Check for existing wallet
 if [ -f ~/.linera-testnet/wallet.json ]; then
     export LINERA_WALLET="$HOME/.linera-testnet/wallet.json"
