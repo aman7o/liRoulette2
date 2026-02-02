@@ -73,6 +73,14 @@ function App() {
     await placeBet(betType, numbers, amount);
   };
 
+  // Apply zoom based on game mode
+  useEffect(() => {
+    const root = document.getElementById('root');
+    if (root) {
+      root.className = gameMode === 'solo' ? 'mode-solo' : '';
+    }
+  }, [gameMode]);
+
   // Start spin sound when wheel begins spinning
   useEffect(() => {
     if (isWheelSpinning) {

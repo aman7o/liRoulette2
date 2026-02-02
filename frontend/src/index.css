@@ -20,11 +20,19 @@ body {
 }
 
 /* Proportional zoom - scales everything uniformly */
+/* Default zoom for host and join modes */
 #root {
   transform: scale(0.85);
   transform-origin: top center;
   width: 117.65%; /* Compensate for scale to fill width */
   margin-left: -8.82%; /* Center the scaled content */
+}
+
+/* Solo mode - full size (1x) */
+#root.mode-solo {
+  transform: scale(1.0);
+  width: 100%;
+  margin-left: 0;
 }
 
 code {
