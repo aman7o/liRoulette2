@@ -61,7 +61,7 @@ echo -e "${YELLOW}🌐 Step 3/4: Starting Linera service...${NC}"
 # Check for existing wallet
 if [ -f ~/.linera-testnet/wallet.json ]; then
     export LINERA_WALLET="$HOME/.linera-testnet/wallet.json"
-    export LINERA_STORAGE="rocksdb:$HOME/.linera-testnet/client.db"
+    export LINERA_STORAGE="rocksdb:$HOME/.linera-testnet/linera.db"
     echo -e "${BLUE}   Using Conway testnet wallet${NC}"
 elif [ -f "$HOME/Library/Application Support/linera/wallet.json" ]; then
     export LINERA_WALLET="$HOME/Library/Application Support/linera/wallet.json"
