@@ -227,7 +227,7 @@ Test all 13 bet types:
 - Type-safe GraphQL queries
 - Real-time state updates
 - Responsive design with mode-specific layouts
-- Sound effects and animations for user engagement
+- Sound effects and animations for user engagement 
 - Automatic port conflict resolution
 
 **DevOps:**
