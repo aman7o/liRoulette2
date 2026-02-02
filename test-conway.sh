@@ -57,6 +57,23 @@ echo ""
 
 # Step 3: Start Linera service
 echo -e "${YELLOW}🌐 Step 3/4: Starting Linera service...${NC}"
+
+# Check for existing wallet
+if [ -f ~/.linera-testnet/wallet.json ]; then
+    export LINERA_WALLET="$HOME/.linera-testnet/wallet.json"
+    export LINERA_STORAGE="rocksdb:$HOME/.linera-testnet/client.db"
+    echo -e "${BLUE}   Using Conway testnet wallet${NC}"
+elif [ -f "$HOME/Library/Application Support/linera/wallet.json" ]; then
+    export LINERA_WALLET="$HOME/Library/Application Support/linera/wallet.json"
+    export LINERA_STORAGE="rocksdb:$HOME/Library/Application Support/linera/client.db"
+    echo -e "${BLUE}   Using default wallet${NC}"
+else
+    echo -e "${RED}ERROR: No Linera wallet found${NC}"
+    echo "Please initialize a wallet first:"
+    echo "  linera wallet init --with-new-chain --faucet https://faucet.testnet-conway.linera.net/"
+    exit 1
+fi
+
 linera service --port 8080 > /tmp/linera-service.log 2>&1 &
 LINERA_PID=$!
 sleep 3
