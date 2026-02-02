@@ -19,12 +19,12 @@ body {
   min-height: 100vh;
 }
 
-/* Proportional zoom in - scales everything uniformly */
+/* Proportional zoom - scales everything uniformly */
 #root {
-  transform: scale(1.083);
+  transform: scale(0.8);
   transform-origin: top center;
-  width: 92.34%; /* Compensate for scale to fill width */
-  margin-left: 3.83%; /* Center the scaled content */
+  width: 125%; /* Compensate for scale to fill width */
+  margin-left: -12.5%; /* Center the scaled content */
 }
 
 code {
