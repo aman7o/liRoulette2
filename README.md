@@ -29,23 +29,30 @@ Multiplayer roulette game on Linera microchains with real-time cross-chain gamep
 - **Frontend**: React + TypeScript + Vite + TailwindCSS
 - **Network**: Conway Testnet (Linera)
 
-## Run Locally
+## Try It Out
 
+### Play Live Deployment
+The game is already running on Conway Testnet - no setup required! Use the App ID above to connect.
+
+### Run Locally (Optional)
 ```bash
 ./run.bash
 ```
 
-## Deploy to Conway Testnet
-
+### Deploy Your Own Instance (Optional)
 ```bash
 ./deploy.sh
 ```
 
 ## Live Deployment
 
+🎰 **Ready to Play**: Already deployed and running on Conway Testnet
+
 - **App ID**: `a204d053e0a7cf735df997e23e4d2d5e9c61cf3f539fcfdab1e6a737a0279da8c1e97e53240f5b8a86b1f2de7aa99b05f82bc2dbc8eb64ec2b419f98d3f17f5a`
 - **Network**: Conway Testnet
-- **Chains**: 20 deployed game rooms
+- **Chains**: 20 pre-deployed game rooms ready for multiplayer
+
+No deployment needed - just connect to the testnet and start playing!
 
 ## Game Modes
 
