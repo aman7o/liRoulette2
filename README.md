@@ -11,7 +11,7 @@ Linera Roulette is a production-ready blockchain gaming application that leverag
 ### Blockchain Gaming
 - **Real-time Multiplayer**: Host and join game rooms across different microchains
 - **On-Chain RNG**: Verifiable random number generation using blockchain timestamps and chain IDs
-- **Complete Roulette Experience**: All 13 standard bet types (straight, split, street, corner, line, column, dozen, red/black, odd/even, high/low)
+- **Complete Roulette Experience**: 13 bet types covering all standard roulette bets (straight, red/black, odd/even, high/low, dozens, columns)
 - **State Isolation**: Each player maintains their own balance and bet history on their personal microchain
 
 ### Technical Achievements
@@ -79,9 +79,10 @@ Linera Roulette is a production-ready blockchain gaming application that leverag
 ### Random Number Generation
 
 Deterministic on-chain RNG using:
-- Block timestamp
+- Block timestamp (microseconds)
 - Chain ID
-- Round number
+- Block height
+- Current bet data (player chains, amounts, numbers)
 - SHA-256 hashing
 
 Ensures verifiable fairness while maintaining blockchain determinism.
@@ -183,16 +184,12 @@ Deploys a new instance with fresh microchains.
 ### Bet Types Verification
 
 Test all 13 bet types:
-- Straight (single number): 35:1 payout
-- Split (two numbers): 17:1 payout
-- Street (three numbers): 11:1 payout
-- Corner (four numbers): 8:1 payout
-- Line (six numbers): 5:1 payout
-- Column: 2:1 payout
-- Dozen: 2:1 payout
-- Red/Black: 1:1 payout
-- Odd/Even: 1:1 payout
-- High/Low: 1:1 payout
+- **Straight** (single number): 35:1 payout
+- **Red/Black**: 1:1 payout
+- **Odd/Even**: 1:1 payout
+- **Low/High** (1-18 / 19-36): 1:1 payout
+- **Dozens** (1st: 1-12, 2nd: 13-24, 3rd: 25-36): 2:1 payout
+- **Columns** (1st, 2nd, 3rd): 2:1 payout
 
 ## Project Structure
 
